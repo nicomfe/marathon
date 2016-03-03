@@ -1,0 +1,125 @@
+// bower:scss
+// endbower
+@import url(https://fonts.googleapis.com/css?family=Oxygen+Mono);
+$fa-font-path: "../bower_components/font-awesome/fonts";
+@import '../bower_components/font-awesome/scss/font-awesome';
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+html,body{
+  width:100%;
+  height:100%;
+  margin:0;
+  display: initial;
+  color:white !important;
+}
+body {
+  font-family: 'Oxygen Mono', sans-serif;
+  padding: 0;
+  div{
+    width:100%;
+    height:100%;
+  }
+}
+
+.primary-text{
+  opacity: 0.87;
+}
+.secondary-text{
+  opacity: 0.64;
+}
+
+.header{
+  background: linear-gradient(rgba(0,0,0,0.50), rgba(0,0,0,0.50)),  url(../images/marathon-back.jpg) no-repeat;
+  background-size: cover;
+  width:100%;
+  height:100%;
+
+  .header-content{
+    text-align:center;
+    color: white;
+    position:absolute;
+    top:50%;
+    bottom:50%;
+    max-height:200px;
+    margin-top:-150px;
+    h1{
+      font-size: 80px;
+      margin: 10px 10px;
+      @extend .primary-text;
+    }
+    h2{
+      @extend .primary-text;
+      margin:10px 10px;
+      font-size: 16px;
+      margin-top:-20px;
+      margin-bottom:30px;
+    }
+    .play{
+      margin-left:auto;
+      margin-right:auto;
+      margin-top:25px;
+      @extend .primary-text;
+      span{
+        font-family: 'Open Sans Condensed', sans-serif;
+        display:flex;
+        padding-top:5px;
+        margin-left:-5px;
+        font-size:19px;
+      }
+      .fa{
+        transition: all 0.3s;
+        cursor: pointer;
+        &:before{
+          font-size: 65px;
+        }
+        &:hover{
+          transform: scale(1.1,1.1);
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.home-face-footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width:100%;
+  height:auto;
+  text-align: center;
+  padding-bottom: 15px;
+  a{
+    display: inline-block;
+    transition: all 0.3s;
+    @extend .secondary-text;
+    &:hover{
+      opacity: 1;
+      transform:scale(1.1,1.1);
+    }
+  }
+  .fa{
+    color:white;
+    font-size:25px;
+    padding: 5px;
+  }
+  .fa-cogs{
+    padding-left:10px;
+  }
+  .crowfunding{
+    color:white;
+    text-decoration: none;
+  }
+}
+
+#fancybox-loading, .fancybox-prev span, .fancybox-next span {
+  background-image: url("bower_components/fancyBox/source/fancybox_sprite@2x.png");
+}
+.fancybox-prev span, .fancybox-next span {
+  background-image: url("bower_components/fancyBox/source/fancybox_sprite@2x.png");
+}
