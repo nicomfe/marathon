@@ -10,7 +10,7 @@
 module.exports = function (grunt) {
   //Heroku Settings
   var pkg = grunt.file.readJSON('package.json');
-  var herokuAppName = pkg.name.replace(/[^a-z0-9]/gi, '');
+  var herokuAppName = 'marathon-movie';
 
   // Load grunt tasks automatically
   require('load-grunt-tasks')(grunt);
