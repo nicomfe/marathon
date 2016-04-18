@@ -17,5 +17,5 @@ Running `grunt test` will run the unit tests with karma.
 - grunt heroku
 - cd heroku
 - git add .
-- git commit -m "new dpeloy"
+- git commit -m "new deploy"
 - git push marathon-landing-page2
