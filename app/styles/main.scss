@@ -236,3 +236,53 @@ video#bgvid {
   50% {margin-left:0px;}
   100%{margin-left:-15px;}
 }
+
+/*about*/
+  html {
+    background: url(../assets/images/maori.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .clouds {
+    position: absolute;
+    bottom: -277px;
+    left: -150px;
+  }
+  h1 { 
+    font-size: 100px !important;
+    color: #c9d0d4; font-family: 'Helvetica Neue', sans-serif;
+    /*font-size: 46px;*/
+    font-weight: 700;
+    line-height: 50px;
+    letter-spacing: 1px;
+    padding: 0 0 40px;
+    position: relative;
+    top: 15%;
+  }
+  #cloud-scroll {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    /*position: relative;*/
+    /*bottom: -150px;*/
+    /*left: -150px;*/
+    width: 100%;
+    height: 400px;
+    background: url(../assets/images/cloud2.png) repeat-y;
+    -webkit-animation: backgroundScroll 20s linear infinite;
+    animation: backgroundScroll 20s linear infinite;
+  }
+     
+  @-webkit-keyframes backgroundScroll {
+    from {background-position: 0 0;}
+    to {background-position: -400px 0;}
+  }
+     
+  @keyframes backgroundScroll {
+    from {background-position: 0 0;}
+    to {background-position: -400px 0;}
+  }
+
+
