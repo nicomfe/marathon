@@ -90,7 +90,7 @@ video#bgvid {
   cursor: pointer;
 }
 
-.home-header-content{
+.header-content{
   text-align:center;
   color: white;
   display:table;
@@ -150,7 +150,8 @@ video#bgvid {
   }
 }
 
-.home-face-footer{
+footer {
+  z-index: 200;  
   position: absolute;
   bottom: 0;
   left: 0;
@@ -181,6 +182,10 @@ video#bgvid {
   }
 }
 
+.about footer {
+  position: relative;
+}
+
 #fancybox-loading, .fancybox-prev span, .fancybox-next span {
   background-image: url("bower_components/fancyBox/source/fancybox_sprite@2x.png");
 }
@@ -207,6 +212,7 @@ video#bgvid {
       flex:1;
       padding-top:10px;
       a{
+        text-shadow: 2px 2px 8px #000;
         text-transform: uppercase;
         color:white;
         @extend .secondary-text;
@@ -245,44 +251,65 @@ video#bgvid {
     -o-background-size: cover;
     background-size: cover;
   }
-  .clouds {
-    position: absolute;
-    bottom: -277px;
-    left: -150px;
-  }
-  h1 { 
-    font-size: 100px !important;
-    color: #c9d0d4; font-family: 'Helvetica Neue', sans-serif;
-    /*font-size: 46px;*/
-    font-weight: 700;
-    line-height: 50px;
-    letter-spacing: 1px;
-    padding: 0 0 40px;
-    position: relative;
-    top: 15%;
-  }
-  #cloud-scroll {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    /*position: relative;*/
-    /*bottom: -150px;*/
-    /*left: -150px;*/
+  .about {
     width: 100%;
-    height: 400px;
-    background: url(../assets/images/cloud2.png) repeat-y;
-    -webkit-animation: backgroundScroll 20s linear infinite;
-    animation: backgroundScroll 20s linear infinite;
-  }
-     
-  @-webkit-keyframes backgroundScroll {
-    from {background-position: 0 0;}
-    to {background-position: -400px 0;}
-  }
-     
-  @keyframes backgroundScroll {
-    from {background-position: 0 0;}
-    to {background-position: -400px 0;}
-  }
+    height: 100%;
 
+    .center-content {
+      width: 500px;
+      margin: auto;
+      background-color: #000;
+      opacity: 0.6;
+      border-radius: 15px;
+      color: white;
+      padding: 15px;
+    }
+    
+/*    h1 { 
+      font-size: 100px !important;
+      color: #c9d0d4; font-family: 'Helvetica Neue', sans-serif;
+
+      font-weight: 700;
+      line-height: 50px;
+      letter-spacing: 1px;
+      padding: 0 0 40px;
+      position: relative;
+      top: 15%;
+    }*/
+
+/*    .clouds {
+      position: absolute;
+      bottom: -277px;
+      left: -150px;
+    }
+*/
+    #cloud-scroll {
+      z-index: 100;
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      /*position: relative;*/
+      /*bottom: -150px;*/
+      /*left: -150px;*/
+      width: 100%;
+      height: 400px;
+      background: url(../assets/images/cloud2.png) repeat-y;
+      -webkit-animation: backgroundScroll 20s linear infinite;
+      animation: backgroundScroll 20s linear infinite;
+    }
+       
+    @-webkit-keyframes backgroundScroll {
+      from {
+        background-position: 0 0;
+      }
+      to {
+        background-position: -400px 0;
+      }
+    }
+       
+    @keyframes backgroundScroll {
+      from {background-position: 0 0;}
+      to {background-position: -400px 0;}
+    }
+  }
 
